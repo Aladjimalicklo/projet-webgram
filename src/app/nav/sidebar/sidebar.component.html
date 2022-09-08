@@ -1,20 +1,40 @@
 
 <mat-drawer-container class="example-container">
-    <mat-drawer mode="side" [opened]="status">
+    <mat-drawer mode="side" opened>
         <mat-list>
-            <div mat-subheader>Folders</div>
-            <mat-list-item *ngFor="let folder of folders">
-              <mat-icon mat-list-icon>folder</mat-icon>
-              <div mat-line>{{folder.name}}</div>
-              <div mat-line> {{folder.updated | date}} </div>
-            </mat-list-item>
+            <div mat-subheader><img src="../../logo webgram.jpg" alt="hop"></div>
+            <mat-list >
+                <mat-list-item>
+                    <mat-icon>dashboard</mat-icon>
+                    <div mat-line>Dashboard</div>
+
+                </mat-list-item>
+                <mat-list-item routerlink="/agent">
+                    <mat-icon>person_add</mat-icon>
+                    <div mat-line>Gestion des agents</div>
+
+                </mat-list-item>
+                <mat-list-item>
+                    <mat-icon>group_add</mat-icon>
+                    <div mat-line>Gestion des profils</div>
+                </mat-list-item>
+                <mat-list-item>
+                    <mat-icon>calendar_today</mat-icon>
+                    <div mat-line>Gestion des jours feriers</div>
+                </mat-list-item>
+                <mat-list-item>
+                    <mat-icon>exit_to_app</mat-icon>
+                    <div mat-line>Sortir de l'application</div>
+                </mat-list-item>
+              </mat-list>
+              
            
         </mat-list>
           
     </mat-drawer>
     <mat-drawer-content>
         <div class="content">
-            <app-toolbar (toggleSidenave)="sidebar()"></app-toolbar>
+            <app-toolbar></app-toolbar>
         </div>
     </mat-drawer-content>
   </mat-drawer-container>
